@@ -15,17 +15,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
 
-        User::create([
-            'name' => "AlBarra Permana",
-            'email' => "albarrapermana027@gmail.com",
-            'password' => bcrypt('12345')
-        ]);
+        User::factory(3)->create();
+
+        // User::create([
+        //     'name' => "AlBarra Permana",
+        //     'email' => "albarrapermana027@gmail.com",
+        //     'password' => bcrypt('12345')
+        // ]);
 
         Category::create([
-            'name' => 'Personal',
-            'slug' => 'personal'
+            'name' => 'Web Programming',
+            'slug' => 'web-programming'
         ]);
 
         Category::create([
@@ -33,22 +34,24 @@ class DatabaseSeeder extends Seeder
             'slug' => 'design'
         ]);
 
-        Post::create([
-            'title' => 'Judul Pertama',
-            'slug' => 'judul-pertama',
-            'excerpt' => 'lorem ipsum ioahfiu uahdauia aoidho',
-            'body' => 'lorem adnakbgfj iyagdsuiygau isagduisg kasjdguaig sadkjgajskg asjkjgfuy sajksj',
-            'category_id' => 1,
-            'user_id' => 1
-        ]);
+        Post::factory(20)->create();
 
-        Post::create([
-            'title' => 'Judul Kedua',
-            'slug' => 'judul-kedua',
-            'excerpt' => 'lorem ipsum ioahfiu uahdauia aoidho',
-            'body' => 'lorem adnakbgfj iyagdsuiygau isagduisg kasjdguaig sadkjgajskg asjkjgfuy sajksj',
-            'category_id' => 2,
-            'user_id' => 1
-        ]);
+        // Post::create([
+        //     'title' => 'Judul Pertama',
+        //     'slug' => 'judul-pertama',
+        //     'excerpt' => 'lorem ipsum ioahfiu uahdauia aoidho',
+        //     'body' => 'lorem adnakbgfj iyagdsuiygau isagduisg kasjdguaig sadkjgajskg asjkjgfuy sajksj',
+        //     'category_id' => 1,
+        //     'user_id' => 1
+        // ]);
+
+        // Post::create([
+        //     'title' => 'Judul Kedua',
+        //     'slug' => 'judul-kedua',
+        //     'excerpt' => 'lorem ipsum ioahfiu uahdauia aoidho',
+        //     'body' => 'lorem adnakbgfj iyagdsuiygau isagduisg kasjdguaig sadkjgajskg asjkjgfuy sajksj',
+        //     'category_id' => 2,
+        //     'user_id' => 1
+        // ]);
     }
 }
